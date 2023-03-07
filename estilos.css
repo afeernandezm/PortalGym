@@ -95,6 +95,11 @@ body {
     row-gap: 30px;
 }
 
+#containerRutinas {
+    border-radius: 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
 .imagenTarjeta {
     width: 90px;
     height: 80px;
@@ -141,15 +146,15 @@ table td:last-child {
 
 table td:last-child button {
     border: none;
-    background: none;
+
     cursor: pointer;
     font-size: 14px;
-    color: #007bff;
-    text-decoration: underline;
+    color: #ffffff;
+
 }
 
 table td:last-child button:hover {
-    color: #0056b3;
+    color: black;
 }
 
 .flip-card {
@@ -248,6 +253,8 @@ textarea {
     width: 35%;
     margin-left: 30px;
 }
+
+
 
 #comentarios textarea {
     height: 80px;

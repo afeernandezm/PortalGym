@@ -48,13 +48,16 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#comentarios">Comentarios</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">Otras
                             acciones</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="citas.html">Citas</a></li>
-                            <li><a class="dropdown-item" href="#">Rutinas</a></li>
+                            <li><a class="dropdown-item" href="Rutinas.html">Rutinas</a></li>
                             <li><a class="dropdown-item" href="#">Mis GYM</a></li>
                             <li><a class="dropdown-item" href="#">Ranking</a></li>
                         </ul>
@@ -76,36 +79,41 @@
     </div>
 
     <div class="container p-4 mt-3">
-        <table class="table table-bordered text-center" style="border: 1px solid black;" id="tablaCitas">
-            <thead style="background-color: #24262b; color: white;">
-                <tr>
-                    <th>GYM</th>
-                    <th>Fecha de la cita</th>
-                    <th>Hora elegida</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>GYM El Euro</td>
-                    <td>22/02/2023</td>
-                    <td>17:30</td>
-                    <td>
-                        <button type="button" class="btn btn-warning" class="gestionCita">Modificar cita</button>
-                        <button type="button" class="btn btn-danger" class="gestionCita">Borrar cita</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Alcides</td>
-                    <td>19/02/2023</td>
-                    <td>19:30</td>
-                    <td>
-                        <button type="button" class="btn btn-warning">Modificar cita</button>
-                        <button type="button" class="btn btn-danger">Borrar cita</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <div class="table-responsive">
+
+            <table class="table table-bordered text-center table-responsive" style="border: 1px solid black;"
+                id="tablaCitas">
+                <thead style="background-color: #24262b; color: white;">
+                    <tr>
+                        <th>GYM</th>
+                        <th>Fecha de la cita</th>
+                        <th>Hora elegida</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>GYM El Euro</td>
+                        <td>22/02/2023</td>
+                        <td>17:30</td>
+                        <td>
+                            <button type="button" class="btn btn-warning" class="gestionCita">Modificar cita</button>
+                            <button type="button" class="btn btn-danger" class="gestionCita">Borrar cita</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Alcides</td>
+                        <td>19/02/2023</td>
+                        <td>19:30</td>
+                        <td>
+                            <button type="button" class="btn btn-warning">Modificar cita</button>
+                            <button type="button" class="btn btn-danger">Borrar cita</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
     </div>
     <div style="text-align: center;" class="mt-3">
         <div>
