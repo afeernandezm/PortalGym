@@ -76,12 +76,13 @@
     </div>
 
     <div class="container p-4 mt-3">
-        <table class="table table-bordered text-center" style="border: 1px solid black;">
+        <table class="table table-bordered text-center" style="border: 1px solid black;" id="tablaCitas">
             <thead style="background-color: #24262b; color: white;">
                 <tr>
                     <th>GYM</th>
                     <th>Fecha de la cita</th>
                     <th>Hora elegida</th>
+                    <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -89,35 +90,45 @@
                     <td>GYM El Euro</td>
                     <td>22/02/2023</td>
                     <td>17:30</td>
+                    <td>
+                        <button type="button" class="btn btn-warning" class="gestionCita">Modificar cita</button>
+                        <button type="button" class="btn btn-danger" class="gestionCita">Borrar cita</button>
+                    </td>
                 </tr>
                 <tr>
                     <td>Alcides</td>
                     <td>19/02/2023</td>
                     <td>19:30</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">Modificar cita</button>
+                        <button type="button" class="btn btn-danger">Borrar cita</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
     <div style="text-align: center;" class="mt-3">
         <div>
-            <img src="imagenes/calendario.png" alt="cita" id="imagenCita">
+            <img src="imagenes/calendario.png" alt="cita" id="imagenCita" class="img-fluid">
         </div>
     </div>
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#citaModal">
-        Pedir Cita
-    </button>
+    <div style="display: flex; justify-content: center;">
+        <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#citaModal">Solicitar
+            cita</button>
+    </div>
+
     <div class="modal fade" id="citaModal" tabindex="-1" role="dialog" aria-labelledby="citaModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="citaModalLabel">Pedir Cita</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <button type="button" class="close" aria-label="Cerrar" onclick="$('#citaModal').modal('hide')">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <form onsubmit="agregarCita(); return false;">
                         <div class="form-group">
                             <label for="nombre">Nombre:</label>
                             <input type="text" class="form-control" id="nombre" name="nombre" required>
@@ -157,11 +168,55 @@
                                 <option value="Gimnasio C">Gimnasio C</option>
                             </select>
                         </div>
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+
+                        <div style="display: flex; justify-content: center;">
+                            <button type="submit" class="btn btn-primary">Enviar</button>
+                        </div>
+
                     </form>
                 </div>
             </div>
 
+
+        </div>
+    </div>
+    <div id="footer">
+        <footer class="footer mt-4">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Compañía</h4>
+                        <ul>
+                            <li><a href="#">Conócenos</a></li>
+                            <li><a href="#">Nuestros servicios</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Gmail</a></li>
+                            <li><a href="#">Opciones de pago</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col" id="rss">
+                        <h4>Síguenos</h4>
+                        <div class="social-links">
+                            <a href="https://twitter.com/afernandezzm_"> <img src="imagenes/twitter.svg"
+                                    alt="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.instagram.com/a.feernandezzm/"> <img src="imagenes/instagram.svg"
+                                    alt="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/antonio-fernandez-911008252/"> <img
+                                    src="imagenes/linkedin.svg" alt="linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                    <br>
+                    <p style="color: #ffffff;">Copyrigth&copy; Todos los derechos reservados 2022</p>
+                </div>
+            </div>
+        </footer>
+        <script src="javascript/botonesCita.js"></script>
+        <script src="javascript/agregarCita.js"></script>
 </body>
 
 </html>

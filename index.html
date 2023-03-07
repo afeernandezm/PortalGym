@@ -8,11 +8,11 @@
     <title>Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="estilos.css">
     <link rel="icon" type="image/jpg" href="imagenes/logo2-removebg-preview.png" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -118,7 +118,7 @@
     <h3 class="titulos"><b>FUNCIONALIDADES</h3>
     <hr>
     <br>
-    <div id="funcionalidades" class="row">
+    <div id="funcionalidades">
 
 
         <div class="card" style=" border-radius: 30px;">
@@ -127,7 +127,10 @@
                 <h3 class="card-title" id="tituloCitas"> <b> Citas</b></h3>
                 <p class="card-text"><b>Gestiona tus citas con tus gym favoritos. </b> <br> Accede a nuestra página y
                     pide cita en tu GYM de confianza</p>
-                <button id="botonTarjeta" type="button" class="btn btn-primary">Pide tu cita</button>
+                <div style="text-align: center;">
+                    <a href="citas.html"><button id="botonTarjeta" type="button" class="btn btn-primary">Pide tu
+                            cita</button></a>
+                </div>
             </div>
         </div>
 
@@ -137,7 +140,10 @@
                 <h3 class="card-title" id="tituloCitas"> <b> Rutinas</b></h3>
                 <p class="card-text"><b>Toma control de tus rutinas. </b> <br> Toma el control y planifica todas tus
                     rutinas para que así no falte nada en tu entrenamiento.</p>
-                <button id="botonTarjeta" type="button" class="btn btn-primary">Rutinas</button>
+                <div style="text-align: center;">
+                    <button id="botonTarjeta" type="button" class="btn btn-primary">Rutinas</button>
+                </div>
+
             </div>
         </div>
 
@@ -147,7 +153,11 @@
                 <h3 class="card-title" id="tituloCitas"> <b> Mis GYM</b></h3>
                 <p class="card-text"><b>Accede a tus gimnasios de confianza con solo un click. </b> <br>Registra tus
                     gimnasios favoritos para tener en cuenta su horario y días de apertura</p>
-                <button id="botonTarjeta" type="button" class="btn btn-primary">Gimnasios</button>
+                <div style="text-align: center;">
+                    <button id="botonTarjeta" type="button" class="btn btn-primary">Gimnasios</button>
+                </div>
+
+
             </div>
         </div>
 
@@ -157,12 +167,14 @@
                 <h3 class="card-title" id="tituloCitas"> <b> Visitas</b></h3>
                 <p class="card-text"><b>Lleva en cuenta las veces que acudes a tu entrenamiento.</b> <br>Encuentra
                     información sobre las veces que has acudido al gimnasio</p>
-                <button id="botonTarjeta" type="button" class="btn btn-primary">Gimnasios</button>
+                <div style="text-align: center;">
+                    <button id="botonTarjeta" type="button" class="btn btn-primary">Visitas</button>
+                </div>
+
             </div>
         </div>
 
     </div>
-
     <br>
     <br>
     <br>
@@ -193,7 +205,7 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img class="img-fluid" src="imagenes/entrenador.png" alt="Biceps"
+                    <img class="imagenTarjeta img-fluid" src="imagenes/entrenador.png" alt="Biceps"
                         style="width:200px;height:150px; margin-top: 20px;">
                 </div>
                 <div class="flip-card-back">
@@ -207,8 +219,8 @@
         <div class="flip-card">
             <div class="flip-card-inner">
                 <div class="flip-card-front">
-                    <img src="imagenes/levantamiento-de-pesas.png" alt="Press hombros" style="width:200px;height:200px;"
-                        class="img-fluid">
+                    <img class="imagenTarjeta img-fluid" src="imagenes/levantamiento-de-pesas.png" alt="Press hombros"
+                        style="width:200px;height:200px;">
                 </div>
                 <div class="flip-card-back">
                     <h1>Press militar hombros</h1>
@@ -226,28 +238,42 @@
     <br>
 
     <br>
-    <div id="comentarios">
-        <h3><b>COMENTARIOS</b></h3>
+    <div class="row">
+        <h3 id="tituloComentarios"><b>COMENTARIOS</b></h3>
         <hr>
-        <form>
-            <div class="form-group">
-                <label for="name">Nombre:</label>
-                <input type="text" class="form-control" id="name" placeholder="Ingresa tu nombre">
+        <div class="col-md-6 float-left">
+            <div id="comentarios">
+                <form>
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="correo">Correo electrónico:</label>
+                        <input type="email" class="form-control" id="correo" name="correo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comentario">Comentario:</label>
+                        <textarea class="form-control" id="comentario" name="comentario" rows="5" required
+                            style="width: 60%;"></textarea>
+                    </div>
+                    <div style="text-align: center;" class="my-3">
+                        <button type="submit" class="btn btn-primary">Enviar comentario</button>
+                    </div>
+                </form>
             </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" placeholder="Ingresa tu correo electrónico">
-            </div>
-            <div class="form-group">
-                <label for="comment">Comentario:</label>
-                <textarea id="textarea" class="form-control" id="comment" rows="5"
-                    placeholder="Ingresa tu comentario"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
+        </div>
+        <div class="col-md-6 float-right mt-4 my-4">
+            <div id="totalComentarios">
 
+            </div>
+        </div>
     </div>
-    <br><br>
+
+    <!-- Espacio extra para dispositivos móviles -->
+    <div class="row">
+        <div class="col-12 my-3"></div>
+    </div>
 
 
     <div id="footer">
@@ -287,7 +313,7 @@
         </footer>
 
     </div>
-
+    <script src="javascript/enviarComentario.js"></script>
 </body>
 
 </html>

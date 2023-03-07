@@ -113,6 +113,10 @@ body {
     overflow: hidden;
 }
 
+.gestionCita {
+    text-decoration: none;
+}
+
 #inicioSesion {
     text-align: right;
     margin-right: 0;
@@ -124,6 +128,28 @@ body {
     background-color: #07CFC6;
     transition: all 0.2s ease-in;
     transform: scale(1.2);
+}
+
+table tr:hover {
+    background-color: #07CFC6;
+}
+
+table td:last-child {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+table td:last-child button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+table td:last-child button:hover {
+    color: #0056b3;
 }
 
 .flip-card {
@@ -223,7 +249,7 @@ textarea {
     margin-left: 30px;
 }
 
-#textarea {
+#comentarios textarea {
     height: 80px;
 }
 
@@ -231,45 +257,23 @@ textarea {
     margin-left: 30px;
 }
 
-#comentarios h3 {
+#tituloComentarios {
     text-align: center;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-
-.form-control {
-    display: block;
-    width: 30%;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    color: #495057;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid #ced4da;
-    border-radius: .25rem;
-    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
-}
-
 .form-control:focus {
-    border-color: #80bdff;
-    outline: 0;
-    box-shadow: 0 0 0 .2rem rgba(0, 123, 255, .25);
+    border-color: #3F51B5;
+    box-shadow: none;
 }
 
 .btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    background-color: #3F51B5;
+    border-color: #3F51B5;
 }
 
 .btn-primary:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: #303F9F;
+    border-color: #303F9F;
 }
 
 .row {
@@ -363,8 +367,6 @@ ul {
     margin: auto;
     border-radius: 50px;
 }
-
-
 
 #olvidaste {
     text-align: center;
