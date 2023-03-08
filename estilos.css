@@ -1,3 +1,11 @@
+* {
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
 #titulo {
     text-align: center;
     font-weight: bold;
@@ -86,14 +94,17 @@ body {
 }
 
 #funcionalidades {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    border-radius: 30px;
-    margin-left: 20%;
-    margin-right: 20%;
-    column-gap: 30px;
-    row-gap: 30px;
+    display: flex;
+    justify-content: center;
 }
+
+#containerFuncionalidades {
+    display: flex;
+    justify-content: center;
+}
+
+
+
 
 #containerRutinas {
     border-radius: 60px;
@@ -284,8 +295,14 @@ textarea {
 }
 
 .row {
+    /* --bs-gutter-x: 1.5rem; */
+    max-width: 100%;
+    --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
 }
 
 ul {
